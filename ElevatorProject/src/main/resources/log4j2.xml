@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" monitorInterval="30">
+	<Appenders>
+		<Console name="StdOut" target="SYSTEM_OUT">
+			<PatternLayout pattern="%msg%n" />
+		</Console>
+		<File name="TraceFileAppender" filename="TraceLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		<File name="WarningFileAppender" filename="WarningLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		<File name="ErrorFileAppender" filename="ErrorLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		<File name="InfoFileAppender" filename="InfoLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		<File name="DebugFileAppender" filename="DebugLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		<File name="RootFileAppender" filename="rootLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+
+	</Appenders>
+	<Loggers>
+		# Set level
+		<Root level="trace">
+			<AppenderRef ref="RootFileAppender" level="trace" />
+		</Root>
+		<Logger name="Elevator.ConsoleInput" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.Scheduler" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.ElevatorStart" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.ElevatorThreads" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.ConfigFile" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.InputValidator" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.SplitBoolean" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+		<Logger name="Elevator.SplitInput" level="trace">
+			<AppenderRef ref="TraceFileAppender" level="trace" />
+			<AppenderRef ref="DebugFileAppender" level="debug" />
+			<AppenderRef ref="InfoFileAppender" level="info" />
+			<AppenderRef ref="WarningFileAppender" level="warn" />
+			<AppenderRef ref="ErrorFileAppender" level="error" />
+
+		</Logger>
+
+
+		<!-- <Logger name="Elevator.ElevatorStart" level="trace"> -->
+		<!-- <AppenderRef ref="StdOut" level="error" /> -->
+		<!-- <AppenderRef ref="WarnExtraFileAppender" level="warn" /> -->
+		<!-- </Logger> -->
+
+	</Loggers>
+</Configuration>
